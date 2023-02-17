@@ -63,7 +63,7 @@
         }
     }
 
-    class IsoscelesTrapezium : Shape
+    class Trapezoid : Shape
     {
         public override string Name => "Isosceles trapezium";
 

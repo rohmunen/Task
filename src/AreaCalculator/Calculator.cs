@@ -11,7 +11,7 @@ namespace AreaCalculator
             Circle = 1,
             Rectangle = 2,
             Triangle = 3,
-            IsoscelesTrapezoid,
+            Trapezoid,
         }
 
         static Dictionary<Shapes, Func<double[], double>> shapes = new()
@@ -35,7 +35,7 @@ namespace AreaCalculator
                 }
             },
             {
-                Shapes.IsoscelesTrapezoid, delegate(double[] segments)
+                Shapes.Trapezoid, delegate(double[] segments)
                 {
                     return new IsoscelesTrapezium().CalculateArea(segments);
                 }
