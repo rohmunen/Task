@@ -46,7 +46,20 @@ namespace AreaCalculator
         {
             if (segments != null) 
             {
-                return shapes[shape ?? (Shapes)segments.Length](segments);
+                try
+                {
+                    return shapes[shape ?? (Shapes)segments.Length](segments);
+                } catch(Exception e)
+                {
+                    if (e is KeyNotFoundException)
+                    {
+                        Console.WriteLine($"Default shape for {segments.Length} params not found");
+                    }
+                    if (e is NotSupportedException)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+                }
             }
             return -1;
         }

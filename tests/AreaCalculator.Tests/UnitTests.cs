@@ -1,3 +1,6 @@
+using Microsoft.VisualStudio.TestPlatform.Utilities;
+using Xunit.Abstractions;
+
 namespace AreaCalculator.Tests
 {
     public class UnitTests
@@ -52,22 +55,25 @@ namespace AreaCalculator.Tests
         }
 
         [Fact]
-        public void Throws_error_on_wrong_segments_count()
+        public void Catches_not_supported_and_returns_minus_one()
         {
             int segmentOne = 10;
-            void act() => Calculator.Calculate(Calculator.Shapes.IsoscelesTrapezoid, segmentOne);
+            double expected = -1;
 
-            Assert.Throws<Exception>(act);
+            double actual = Calculator.Calculate(Calculator.Shapes.IsoscelesTrapezoid, segmentOne);
+
+            Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void Throws_error_if_cant_default_to_a_shape()
+        public void Catches_key_not_found_error_and_returns_minus_one()
         {
             var segmentsValue = new double[] { 1, 1, 1, 1, 1, 1, 1, 1 };
+            double expected = -1;
 
-            void act() => Calculator.Calculate(Calculator.Shapes.IsoscelesTrapezoid, segmentsValue);
+            double actual = Calculator.Calculate(Calculator.Shapes.IsoscelesTrapezoid, segmentsValue);
 
-            Assert.Throws<Exception>(act);
+            Assert.Equal(expected, actual);
         }
     }
 }

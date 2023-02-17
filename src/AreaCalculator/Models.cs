@@ -9,7 +9,7 @@
         {
             if (RequiredParamsCount != segments.Length)
             {
-                throw new Exception($"Incorrect amount of parameters to count {this.Name} area ({this.RequiredParamsCount} needed {segments.Length} provided)");
+                throw new NotSupportedException($"Incorrect amount of parameters to count {this.Name} area ({this.RequiredParamsCount} needed {segments.Length} provided)");
             }
         }
 
