@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AreaCalculator", "AreaCalculator\AreaCalculator.csproj", "{38CA878F-D110-4473-A285-ABC13C0C6991}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AreaCalculator", "src\AreaCalculator\AreaCalculator.csproj", "{38CA878F-D110-4473-A285-ABC13C0C6991}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AreaCalculator.Tests", "AreaCalculator.Tests\AreaCalculator.Tests.csproj", "{A5942EB3-1923-44FF-92C3-C765C62C0614}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AreaCalculator.Tests", "tests\AreaCalculator.Tests\AreaCalculator.Tests.csproj", "{A5942EB3-1923-44FF-92C3-C765C62C0614}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8EE3CD5B-3436-46CB-9D53-D0699ECE866E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{362BB8DD-5C57-4A8D-837F-847EAC1FF982}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +28,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{38CA878F-D110-4473-A285-ABC13C0C6991} = {8EE3CD5B-3436-46CB-9D53-D0699ECE866E}
+		{A5942EB3-1923-44FF-92C3-C765C62C0614} = {362BB8DD-5C57-4A8D-837F-847EAC1FF982}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD082A1C-EA4B-4148-949A-B40E05659AE7}

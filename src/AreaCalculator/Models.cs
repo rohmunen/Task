@@ -17,14 +17,7 @@
 
         public double CalculateArea(double[] segments)
         {
-            try
-            {
-                CheckParamsCount(segments);
-            } catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return -1;
-            }
+            CheckParamsCount(segments);
             return Calculate(segments);
         }
     }

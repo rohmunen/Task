@@ -1,6 +1,6 @@
 namespace AreaCalculator.Tests
 {
-    public class UnitTest1
+    public class UnitTests
     {
         [Fact]
         public void Calculate_circle_area_outputs_correct_result()
