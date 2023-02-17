@@ -54,11 +54,9 @@ namespace AreaCalculator
                     if (e is KeyNotFoundException)
                     {
                         Console.WriteLine($"Default shape for {segments.Length} params not found");
+                        return -1;
                     }
-                    if (e is NotSupportedException)
-                    {
-                        Console.WriteLine(e.Message);
-                    }
+                    Console.WriteLine(e.Message);
                 }
             }
             return -1;

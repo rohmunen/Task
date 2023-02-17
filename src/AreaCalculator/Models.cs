@@ -33,6 +33,7 @@
             var firstSide = segments[0];
             var secondSide = segments[1];
             var thirdSide = segments[2];
+            
             double semiperimeter = (firstSide + secondSide + thirdSide) / 2;
             return Math.Sqrt(semiperimeter * (semiperimeter - firstSide) * (semiperimeter - secondSide) * (semiperimeter - thirdSide));
         }
