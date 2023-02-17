@@ -59,5 +59,15 @@ namespace AreaCalculator.Tests
 
             Assert.Throws<Exception>(act);
         }
+
+        [Fact]
+        public void Throws_error_if_cant_default_to_a_shape()
+        {
+            var segmentsValue = new double[] { 1, 1, 1, 1, 1, 1, 1, 1 };
+
+            void act() => Calculator.Calculate(Calculator.Shapes.IsoscelesTrapezoid, segmentsValue);
+
+            Assert.Throws<Exception>(act);
+        }
     }
 }
