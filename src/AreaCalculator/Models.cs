@@ -1,4 +1,6 @@
-﻿namespace AreaCalculator.Models
+﻿using System.Collections.Immutable;
+
+namespace AreaCalculator.Models
 {
     abstract class Shape
     {
@@ -30,10 +32,17 @@
 
         protected override double Calculate(double[] segments)
         {
+            Array.Sort(segments);
             var firstSide = segments[0];
             var secondSide = segments[1];
             var thirdSide = segments[2];
-            
+
+            // Check if triangle is right
+            if (firstSide * firstSide + secondSide * secondSide == thirdSide * thirdSide)
+            {
+                return firstSide * secondSide / 2;
+            }
+
             double semiperimeter = (firstSide + secondSide + thirdSide) / 2;
             return Math.Sqrt(semiperimeter * (semiperimeter - firstSide) * (semiperimeter - secondSide) * (semiperimeter - thirdSide));
         }
